@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
+body {
+    font-family: 'Sora', sans-serif;
+    padding: 0;
+    background-color: #BE0071;
+    margin: 0;
+    padding: 0;
+  }
+
+  #div1, #div2 {
+    float: left;
+    width: 600px;
+    height: 600px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+  
+ /* #resizableDiv {
+    padding: 10px;
+    width: auto;
+    height: auto;
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 1000px;
+    max-height: Auto;
+    overflow: hidden;
+    resize: both;
+    position: relative;
+    cursor: grab;
+    z-index: 1; /* Lower z-index to be below draggableDiv } */
+  
+  .container2 {
+    width: 80%;
+    height: 70%;
+    margin: auto; /* Add this line to center horizontally */
+    margin-top: auto;
+    display: flex;
+    flex-direction: column; /* Adjust this if you want the children to stack horizontally */
+    justify-content: center; /* Add this line to center vertically */
+    align-items: center; /* Add this line to center horizontally */
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; 
+  }
+
+  .ai-output {
+    max-width: 700px;
+  }
+
+  
+  .dashboard-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    color: black;
+    border-bottom: 30px solid #8d0055 ;
+  }
+  
+  .chart-container {
+    padding: 20px;
+    min-width: 400px;
+    min-height: 400px;
+    width: 80%;
+    height: 70%;
+  }
+  
+  .full-width {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .chart-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20%;
+    position: relative;
+    padding: 20px 0;
+    background-color: #ffffff;
+    color: black;
+    border-top: 30px solid #8d0055 ;
+  }
+
+/* CSS */
+button {
+  background-color: transparent;
+  border: 2px solid #BE0071;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10%;
+  will-change: transform;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #BE0071;
+  box-shadow:#BE0071 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Basic styling for the select elements */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the dropdown arrow */
+select::after {
+  content: '\25BC';  /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #555;
+}
+
+/* Focus effect */
+select:focus {
+  outline: none;
+  border-color: #BE0071;
+  box-shadow: 0 0 5px #BE0071;
+}
+
+/* Style for options */
+option {
+  background-color: #fff;
+  color: #BE0071;
+}
+
+/* Style for selected option */
+option:checked {
+  background-color: #BE0071;
+  color: #fff;
+}
+
+#changeableChartCanvas {
+    max-width: 70%;  
+    max-height: 50%;
+}
