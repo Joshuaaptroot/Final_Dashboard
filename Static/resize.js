@@ -32,10 +32,9 @@ function handleMouseMove(event) {
     let newWidth = event.clientX - startX;
     let newHeight = newWidth / aspectRatio;
 
-    // Check for minimum size
     newWidth = Math.max(newWidth, 200);
 
-    // Ensure height is not greater than width
+  
     newHeight = Math.min(newHeight, newWidth);
 
     resizableDiv.style.width = newWidth + 'px';

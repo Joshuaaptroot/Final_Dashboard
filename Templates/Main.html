@@ -3,81 +3,98 @@
 
 <head>
 
+    <!-- Include Chart.js library for creating charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Include adapter for using date-fns with Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}">
+    <!-- Include Main.js script -->
     <script src="{{ url_for('static', filename='Main.js') }}"></script>
-    <script src="{{ url_for('static', filename='resize.js') }}"></script>
+    <!-- Include resize.js script -->
 
 </head>
 
 <body>
 
+    <!-- Header section -->
     <header>
+        <!-- Dashboard title -->
         <div class="dashboard-title">RobotMetrics Dashboard</div>
     </header>
 
-<body>
+    <!-- Main body section -->
+    <body>
 
-                <div class='container2'>
-        
-                    <section>
-                        <div class="chart-row">
-                            <div class="chart-container full-width" 
-                            ontouchstart="ts(event)"
-                            ontouchmove="tm(event)">
-                                <h2>Changeable Chart</h2>
-                                <h3>Janus: </h3>
-                                <p class="ai-output"><!-- COMMENTARY_PLACEHOLDER --></p>
+        <!-- Container for charts and other content -->
+        <div class='container2'>
 
-                                <select id="x-axis-dropdown">
-                                  
-                                    <option value="Execution_Time">Execution Time</option>
-                                    <option value="Identification">Identification Time</option>
-                                    <option value="CPU_Usage">CPU Usage</option>
-                                    <option value="Variable_Manipulation_Time">Variable Manipulation Time</option>
-                                    <option value="Network_Requests">Network Requests</option>
-                                    <option value="Error_Exception_Count">Error Exception Count</option>
-                                    <option value="Power_Consumption">Power Consumption</option>
-                                    <option value="Task_Success">Task Success</option>
-                                    <option value="Transaction_Type">Transaction Type</option>
-                                    <option value="Assignee">Assignee</option>
-                                    
-                                </select>
-            
-                                <select id="y-axis-dropdown">
-                                
-                                    <option value="Execution_Time">Execution Time</option>
-                                    <option value="Identification_Time">Identification Time</option>
-                                    <option value="CPU_Usage">CPU Usage</option>
-                                    <option value="Variable_Manipulation_Time">Variable Manipulation Time</option>
-                                    <option value="Network_Requests">Network Requests</option>
-                                    <option value="Error_Exception_Count">Error Exception Count</option>
-                                    <option value="Power_Consumption">Power Consumption</option>
-                                    <option value="Task_Success">Task Success</option>
-                                    <option value="Transaction_Type">Transaction Type</option>
-                                    <option value="Assignee">Assignee</option>
-                                    
-                                </select>
+            <!-- Chart section -->
+            <section>
+                <!-- Chart container with touch events for mobile devices, ready for use in future sprint to implement resize and drag capabilities -->
+                <div class="chart-row">
+                    <div class="chart-container full-width" 
+                        ontouchstart="ts(event)"
+                        ontouchmove="tm(event)">
+                        <!-- Chart title -->
+                        <h1>ANALYSE DATA WITH JANUS</h1>
+                        <!-- Placeholder for AI commentary, the AI output is named Janus, after the roman god of data, a fitting name given the potential of AI and its ability to analyse data. mroeover that it is a product of data -->
+                        <h3>Janus: </h3>
+                        <p class="ai-output"><!-- COMMENTARY_PLACEHOLDER --></p>
 
-                                <select id="type-dropdown">
-                                    <option value ="bar">Bar Chart</option>
-                                    <option value ="line">Line Chart</option>
-                                    <option value ="scatter">Scatter Plot chart</option>
-                                    <option value ="bubble">Bubble Chart</option>
-                                    <option value ="radar">Radar Chart</option>
-                                </select>
-            
-                                <canvas id="changeableChartCanvas"></canvas>
-                                <button id="render" onclick="renderChangeableChart()">Render Chart</button>
+                        <!-- Dropdowns for selecting X and Y axes, and chart type -->
+                        <select id="x-axis-dropdown">
+                            <!-- Options for X-axis selection -->
+                            <option value="Execution_Time">Execution Time</option>
+                            <option value="Identification_Time">Identification Time</option>
+                            <option value="CPU_Usage">CPU Usage</option>
+                            <option value="Variable_Manipulation_Time">Variable Manipulation Time</option>
+                            <option value="Network_Requests">Network Requests</option>
+                            <option value="Error_Exception_Count">Error Exception Count</option>
+                            <option value="Power_Consumption">Power Consumption</option>
+                            <option value="Task_Success">Task Success</option>
+                            <option value="Transaction_Type">Transaction Type</option>
+                            <option value="Assignee">Assignee</option>
+                        </select>
 
-                            </div>
-                        </div>
-                    </section>
+                        <select id="y-axis-dropdown">
+                            <!-- Options for Y-axis selection -->
+                            <option value="Execution_Time">Execution Time</option>
+                            <option value="Identification_Time">Identification Time</option>
+                            <option value="CPU_Usage">CPU Usage</option>
+                            <option value="Variable_Manipulation_Time">Variable Manipulation Time</option>
+                            <option value="Network_Requests">Network Requests</option>
+                            <option value="Error_Exception_Count">Error Exception Count</option>
+                            <option value="Power_Consumption">Power Consumption</option>
+                            <option value="Task_Success">Task Success</option>
+                            <option value="Transaction_Type">Transaction Type</option>
+                            <option value="Assignee">Assignee</option>
+                        </select>
+
+                        <select id="type-dropdown">
+                            <!-- Options for selecting chart type -->
+                            <option value="bar">Bar Chart</option>
+                            <option value ="bar">Bar Chart</option>
+                            <option value ="line">Line Chart</option>
+                            <option value ="scatter">Scatter Plot chart</option>
+                            <option value ="bubble">Bubble Chart</option>
+                            <option value ="radar">Radar Chart</option>
+                        </select>
+
+                        <!-- Canvas element for rendering the chart -->
+                        <canvas id="changeableChartCanvas"></canvas>
+                        <!-- Button to trigger chart rendering -->
+                        <button id="render" onclick="renderChangeableChart()">Render Chart</button>
+
+                    </div>
                 </div>
-       
+            </section>
 
+        </div>
+
+    <!-- Footer section -->
     <footer>
+        <!-- Copyright information -->
         <div class="footer">© 2023 CCL RobotMetrics Dashboard</div>
     </footer>
 </body>
