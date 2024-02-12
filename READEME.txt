@@ -1,1 +1,40 @@
+# RobotMetrics Dashboard
+
+## Overview
+
+The RobotMetrics Dashboard is a web application for visualizing and analyzing robot metrics data. It provides a user-friendly interface for exploring different metrics, generating charts, and receiving AI-driven analysis commentary.
+
+## Features
+
+- Dynamic Chart Rendering: Choose X and Y axes to generate interactive charts.
+- AI Analysis: Get insightful commentary on the selected metrics.
+- Data Source: Retrieve data from the RobotMetrics SQLite database.
+- Responsive Design: The dashboard is designed to work seamlessly on different devices.
+
+## Prerequisites
+
+- Python 3.x
+- Flask
+- Chart.js
+- OpenAI API Key -  IMPORTANT: You need to set up your own API key -  go here: https://platform.openai.com/api-keys and using a GPT completion has a marginal cost (pennies)
+
+## Setup
+
+1. Clone the repository: `git clone https://github.com/your-username/RobotMetrics-Dashboard.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Set up OpenAI API Key: Obtain an API key and update it in the `generate_commentary_function` function in `app.py`.
+4. Run the application: `python app.py`
+
+## Usage
+
+1. Open the application in your web browser: `http://localhost:5000/`
+2. Explore different metrics using the dropdowns.
+3. Click the "Render Chart" button to visualize the selected metrics.
+4. View AI-driven commentary in the "Janus" section.
+
+## Known Issues
+
+CORS misconfiguration, currently using wildcard,
+resize.js & drag.js are incomplete files that when linked will only partially work/not work at all.
+
 
